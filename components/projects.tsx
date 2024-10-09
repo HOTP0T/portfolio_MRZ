@@ -5,36 +5,39 @@ import { Card } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
-import { useTranslation } from 'react-i18next';
-import Image from 'next/image';
+import { useTranslation } from "react-i18next";
+import Image from "next/image";
 
 const projects = [
   {
-    id: 'project1',
-    name: 'E-commerce Platform',
-    description: 'A full-stack e-commerce platform with user authentication, product management, and payment integration.',
-    technologies: ['Next.js', 'Node.js', 'MongoDB', 'Stripe'],
-    status: 'Completed',
-    preview: 'https://source.unsplash.com/random/800x600?ecommerce',
-    link: 'https://github.com/yourusername/ecommerce-platform'
+    id: "project1",
+    name: "Bingosrs - OSRS Bingo Card",
+    description:
+      "A Bingo Card tool for OSRS events, designed to track progress, color-code tiles, mark completions, add notes, and stay organized and motivated throughout the event.",
+    technologies: ["html", "css", "js"],
+    status: "In Progress",
+    preview: "/images/bingosrs_screenshot.png",
+    link: "bingosrs.online/",
   },
   {
-    id: 'project2',
-    name: 'Task Management App',
-    description: 'A collaborative task management application with real-time updates and team features.',
-    technologies: ['React', 'Firebase', 'Material-UI'],
-    status: 'In Progress',
-    preview: 'https://source.unsplash.com/random/800x600?task-management',
-    link: 'https://github.com/yourusername/task-management-app'
+    id: "project2",
+    name: "Recipe Search Engine",
+    description:
+      "An optimized search engine for a recipe page with detailed documentation",
+    technologies: ["html", "scss", "React"],
+    status: "Completed",
+    preview: "/images/OCRP7_screenshot.png",
+    link: "hotp0t.github.io/ocr-p7-alogrithmerecherchejs/",
   },
   {
-    id: 'project3',
-    name: 'Weather Forecast Dashboard',
-    description: 'An interactive weather forecast dashboard with data visualization and location-based services.',
-    technologies: ['Vue.js', 'D3.js', 'OpenWeatherMap API'],
-    status: 'Completed',
-    preview: 'https://source.unsplash.com/random/800x600?weather',
-    link: 'https://github.com/yourusername/weather-forecast-dashboard'
+    id: "project3",
+    name: "Marieke's Online Workshop",
+    description:
+      "Marieke's online workshop is a web application that allows users to book workshops, view the workshop schedule, and get in touch with Marieke.",
+    technologies: ["Nextjs", "Shadcn", "Tailwind CSS"],
+    status: "Completed",
+    preview: "/images/Mariekeapp_screenshot.png",
+    link: "marieke-web-app.vercel.app",
   }
 ];
 
@@ -52,14 +55,16 @@ const Projects = () => {
   }
 
   return (
-    <motion.section 
-      id="projects" 
+    <motion.section
+      id="projects"
       className="w-full max-w-5xl mx-auto px-4 py-16 flex flex-col items-center justify-center min-h-screen"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-3xl font-bold mb-6 font-heading">{t('projects.title')}</h2>
+      <h2 className="text-3xl font-bold mb-6 font-heading">
+        {t("projects.title")}
+      </h2>
       <div className="w-full">
         <Card className="w-full">
           <div className="flex flex-col md:flex-row">
@@ -73,7 +78,9 @@ const Projects = () => {
                     selectedProject.id === project.id
                       ? "bg-primary/10 font-bold"
                       : "hover:bg-primary/5",
-                    index !== projects.length - 1 ? "border-b border-border" : ""
+                    index !== projects.length - 1
+                      ? "border-b border-border"
+                      : ""
                   )}
                   whileHover={{ x: 5 }}
                   whileTap={{ scale: 0.95 }}
@@ -90,25 +97,37 @@ const Projects = () => {
               className="w-full md:w-3/4 p-6"
             >
               <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
-                <Image 
-                  src={selectedProject.preview} 
+                <Image
+                  src={selectedProject.preview}
                   alt={t(`projects.${selectedProject.id}.name`)}
-                  width={800} 
-                  height={600} 
+                  width={800}
+                  height={600}
                   layout="responsive"
                   objectFit="cover"
                 />
               </div>
-              <h3 className="text-2xl font-bold mb-2 font-heading">{t(`projects.${selectedProject.id}.name`)}</h3>
-              <p className="mb-4">{t(`projects.${selectedProject.id}.description`)}</p>
+              <h3 className="text-2xl font-bold mb-2 font-heading">
+                {t(`projects.${selectedProject.id}.name`)}
+              </h3>
               <p className="mb-4">
-                <strong>{t('projects.technologies')}:</strong> {selectedProject.technologies.join(", ")}
+                {t(`projects.${selectedProject.id}.description`)}
               </p>
               <p className="mb-4">
-                <strong>{t('projects.status')}:</strong> {t(`projects.${selectedProject.id}.status`)}
+                <strong>{t("projects.technologies")}:</strong>{" "}
+                {selectedProject.technologies.join(", ")}
+              </p>
+              <p className="mb-4">
+                <strong>{t("projects.status")}:</strong>{" "}
+                {t(`projects.${selectedProject.id}.status`)}
               </p>
               <Button asChild variant="default">
-                <a href={selectedProject.link} target="_blank" rel="noopener noreferrer">{t('projects.viewProject')}</a>
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {t("projects.viewProject")}
+                </a>
               </Button>
             </motion.div>
           </div>

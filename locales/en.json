@@ -12,25 +12,25 @@
     "scrollToProjects": "Scroll to projects"
   },
   "projects": {
-    "title": "Projects",
-    "viewProject": "View Project",
-    "technologies": "Technologies",
-    "status": "Status",
-    "project1": {
-      "name": "E-commerce Platform",
-      "description": "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
-      "status": "Completed"
-    },
-    "project2": {
-      "name": "Task Management App",
-      "description": "A collaborative task management application with real-time updates and team features.",
-      "status": "In Progress"
-    },
-    "project3": {
-      "name": "Weather Forecast Dashboard",
-      "description": "An interactive weather forecast dashboard with data visualization and location-based services.",
-      "status": "Completed"
-    }
+  "title": "Projects",
+  "viewProject": "View Project",
+  "technologies": "Technologies",
+  "status": "Status",
+  "project1": {
+    "name": "Bingosrs - OSRS Bingo Card",
+    "description": "A Bingo Card tool for OSRS events, designed to track progress, color-code tiles, mark completions, add notes, and stay organized and motivated throughout the event.",
+    "status": "In Progress"
+  },
+  "project2": {
+    "name": "Search Algorythm",
+    "description": "An optimized seach engine for a recipe page with detailed documentation",
+    "status": "Completed"
+  },
+  "project3": {
+    "name": "Marieke's online Workshop",
+    "description": "Marieke's online workshop is a web application that allows users to book workshops, view the workshop schedule, and get in touch with Marieke.",
+    "status": "Completed"
+  }
   },
   "skills": {
     "title": "Skills",

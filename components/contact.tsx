@@ -63,7 +63,7 @@ export default function Contact() {
         </form>
         <div className="flex items-center justify-center">
           <Avatar className="h-48 w-48">
-            <AvatarImage src="/placeholder.svg?height=192&width=192" alt="Profile" />
+            <AvatarImage src="https://user.oc-static.com/users/avatars/16968737367755_WhatsApp%20Image%202023-10-09%20at%2019.41.30.jpeg" alt="Profile" />
             <AvatarFallback>
               <User className="h-24 w-24" />
             </AvatarFallback>

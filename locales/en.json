@@ -1,0 +1,68 @@
+{
+  "header": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills & About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Maximilien Rouillon Zhu",
+    "subtitle": "Full-Stack Developer",
+    "description": "Crafting innovative web solutions with modern technologies.",
+    "scrollToProjects": "Scroll to projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "viewProject": "View Project",
+    "technologies": "Technologies",
+    "status": "Status",
+    "project1": {
+      "name": "E-commerce Platform",
+      "description": "A full-stack e-commerce platform with user authentication, product management, and payment integration.",
+      "status": "Completed"
+    },
+    "project2": {
+      "name": "Task Management App",
+      "description": "A collaborative task management application with real-time updates and team features.",
+      "status": "In Progress"
+    },
+    "project3": {
+      "name": "Weather Forecast Dashboard",
+      "description": "An interactive weather forecast dashboard with data visualization and location-based services.",
+      "status": "Completed"
+    }
+  },
+  "skills": {
+    "title": "Skills",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Tools"
+  },
+  "about": {
+    "title": "About Me",
+    "content": "I'm a passionate full-stack developer with a keen interest in creating innovative web solutions. With expertise in modern technologies, I strive to build scalable and efficient applications that solve real-world problems. When I'm not coding, you can find me exploring new tech, gaming, or travelling the world and its cuisine."
+  },
+  "techStack": {
+    "title": "Tech Stack"
+  },
+  "contact": {
+    "title": "Contact Me",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "Your email",
+    "message": "Message",
+    "messagePlaceholder": "Your message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message Sent!",
+    "successDescription": "Thank you for your message. I'll get back to you soon!",
+    "quote": "Let's collaborate and build something amazing together. Your next great web app is just a message away!"
+  },
+  "footer": {
+    "name": "Maximilien Rouillon Zhu",
+    "role": "Full-Stack Developer | Web Enthusiast",
+    "rights": "© 2024 Maximilien Rouillon Zhu. All rights reserved.",
+    "builtWith": "Built with Next.js, React, Tailwind CSS, and shadcn/ui"
+  }
+}

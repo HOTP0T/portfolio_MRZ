@@ -1,0 +1,68 @@
+{
+  "header": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "skills": "Compétences & À propos",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Maximilien Rouillon Zhu",
+    "subtitle": "Développeur Full-Stack",
+    "description": "Création de solutions web innovantes avec des technologies modernes.",
+    "scrollToProjects": "Défiler vers les projets"
+  },
+  "projects": {
+    "title": "Projets",
+    "viewProject": "Voir le projet",
+    "technologies": "Technologies",
+    "status": "Statut",
+    "project1": {
+      "name": "Plateforme E-commerce",
+      "description": "Une plateforme e-commerce full-stack avec authentification utilisateur, gestion des produits et intégration des paiements.",
+      "status": "Terminé"
+    },
+    "project2": {
+      "name": "Application de Gestion des Tâches",
+      "description": "Une application collaborative de gestion des tâches avec mises à jour en temps réel et fonctionnalités d'équipe.",
+      "status": "En cours"
+    },
+    "project3": {
+      "name": "Tableau de Bord Météo",
+      "description": "Un tableau de bord météo interactif avec visualisation de données et services basés sur la localisation.",
+      "status": "Terminé"
+    }
+  },
+  "skills": {
+    "title": "Compétences",
+    "frontend": "Frontend",
+    "backend": "Backend",
+    "tools": "Outils"
+  },
+  "about": {
+    "title": "À propos de moi",
+    "content": "Je suis un développeur full-stack passionné avec un vif intérêt pour la création de solutions web innovantes. Avec une expertise dans les technologies modernes, je m'efforce de construire des applications évolutives et efficaces qui résolvent des problèmes du monde réel. Quand je ne code pas, vous pouvez me trouver en train d'explorer de nouvelles technologies, de jouer à des jeux vidéo ou de voyager à travers le monde et sa cuisine."
+  },
+  "techStack": {
+    "title": "Stack Technologique"
+  },
+  "contact": {
+    "title": "Contactez-moi",
+    "name": "Nom",
+    "namePlaceholder": "Votre nom",
+    "email": "Email",
+    "emailPlaceholder": "Votre email",
+    "message": "Message",
+    "messagePlaceholder": "Votre message",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "success": "Message envoyé !",
+    "successDescription": "Merci pour votre message. Je vous répondrai bientôt !",
+    "quote": "Collaborons et construisons quelque chose d'incroyable ensemble. Votre prochaine grande application web n'est qu'un message !"
+  },
+  "footer": {
+    "name": "Maximilien Rouillon Zhu",
+    "role": "Développeur Full-Stack | Passionné du Web",
+    "rights": "© 2024 Maximilien Rouillon Zhu. Tous droits réservés.",
+    "builtWith": "Construit avec Next.js, React, Tailwind CSS et shadcn/ui"
+  }
+}

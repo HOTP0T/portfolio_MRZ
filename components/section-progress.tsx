@@ -10,6 +10,9 @@ const SectionProgress = () => {
   const observerRef = useRef<IntersectionObserver | null>(null);
 
   useEffect(() => {
+    const isMobile = window.innerWidth <= 768; // Check if the screen width is mobile-sized
+    const thresholdValue = isMobile ? 0.3 : 0.5; // Use a lower threshold on mobile screens
+
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -18,7 +21,7 @@ const SectionProgress = () => {
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the section is visible
+      { threshold: thresholdValue } // Adjust the threshold based on screen size
     );
 
     sections.forEach((section) => {

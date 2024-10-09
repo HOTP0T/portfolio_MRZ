@@ -62,7 +62,7 @@
   "footer": {
     "name": "Maximilien Rouillon Zhu",
     "role": "Développeur Full-Stack | Passionné du Web",
-    "rights": "© 2024 Maximilien Rouillon Zhu. Tous droits réservés.",
+    "rights": "© 2024 MRZ.",
     "builtWith": "Construit avec Next.js, React, Tailwind CSS et shadcn/ui"
   }
 }

@@ -24,15 +24,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <NextLink href="https://github.com/yourusername" target="_blank" rel="noreferrer">
+              <NextLink href="https://github.com/HOTP0T" target="_blank" rel="noreferrer">
                 <Github className="h-5 w-5" />
                 <span className="sr-only">GitHub</span>
               </NextLink>
-              <NextLink href="https://linkedin.com/in/yourusername" target="_blank" rel="noreferrer">
+              <NextLink href="https://www.linkedin.com/in/maximilien-rouillon/" target="_blank" rel="noreferrer">
                 <Linkedin className="h-5 w-5" />
                 <span className="sr-only">LinkedIn</span>
               </NextLink>
-              <NextLink href="https://yourwebsite.com" target="_blank" rel="noreferrer">
+              <NextLink href="hotp0t.link" target="_blank" rel="noreferrer">
                 <Link2 className="h-5 w-5" />
                 <span className="sr-only">Website</span>
               </NextLink>
@@ -41,7 +41,7 @@ const Footer = () => {
         </div>
         <div className="mt-8 pt-8 border-t border-muted-foreground/10 text-center text-sm text-muted-foreground">
           <p>Built with Next.js, React, Tailwind CSS, and shadcn/ui</p>
-          <p>© 2024 Maximilien Rouillon Zhu. All rights reserved.</p>
+          <p>© 2024 MRZ.</p>
         </div>
       </div>
     </footer>

@@ -10,7 +10,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/components/ui/use-toast";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Github, Linkedin, Mail, Twitter } from 'lucide-react';
+import { Github, Linkedin, Mail, Link2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const formSchema = z.object({
@@ -115,18 +115,22 @@ const ContactAndFooter = () => {
             <p className="text-sm text-muted-foreground">{t('footer.role')}</p>
           </div>
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/HOTP0T" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Github className="h-6 w-6" />
             </a>
-            <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <a href="https://www.linkedin.com/in/maximilien-rouillon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="mailto:your.email@example.com" aria-label="Email">
+            <a href="mailto:tpcmaky@gmail.com" aria-label="Email">
               <Mail className="h-6 w-6" />
             </a>
-            <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-6 w-6" />
-            </a>
+            <a href="https://hotp0t.link" target="_blank" rel="noopener">
+                <Link2 className="h-5 w-5" />
+                <span className="sr-only">Website</span>
+              </a>
+            {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Twitter className="h-6 w-6" /> 
+            </a>*/}
           </div>
         </div>
         <div className="mt-4 text-center text-sm text-muted-foreground">

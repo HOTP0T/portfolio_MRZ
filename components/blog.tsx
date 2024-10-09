@@ -1,102 +1,56 @@
-"use client"
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { cva, type VariantProps } from "class-variance-authority"
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { cn } from "@/lib/utils"
 
-interface BlogPost {
-  title: string;
-  excerpt: string;
-  date: string;
-  tags: string[];
-  readTime: string;
+const buttonVariants = cva(
+  "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/90",
+        destructive:
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+        outline:
+          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline",
+      },
+      size: {
+        default: "h-10 px-4 py-2",
+        sm: "h-9 rounded-md px-3",
+        lg: "h-11 rounded-md px-8",
+        icon: "h-10 w-10",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
+
+export interface ButtonProps
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean
 }
 
-const blogPosts: BlogPost[] = [
-  {
-    title: 'The Future of Web Development: Trends to Watch',
-    excerpt: 'Explore the emerging technologies and methodologies shaping the future of web development.',
-    date: '2023-05-15',
-    tags: ['Web Development', 'Trends'],
-    readTime: '5 min read',
-  },
-  {
-    title: 'Optimizing React Applications for Performance',
-    excerpt: 'Learn advanced techniques to boost the performance of your React applications.',
-    date: '2023-04-22',
-    tags: ['React', 'Performance'],
-    readTime: '8 min read',
-  },
-  {
-    title: 'Building Scalable Backend Systems with Node.js',
-    excerpt: 'Discover best practices for creating robust and scalable backend systems using Node.js.',
-    date: '2023-03-10',
-    tags: ['Node.js', 'Backend', 'Scalability'],
-    readTime: '10 min read',
-  },
-];
+const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : "button"
+    return (
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }), "hover-lift")}
+        ref={ref}
+        {...props}
+      />
+    )
+  }
+)
+Button.displayName = "Button"
 
-const BlogPost: React.FC<{ post: BlogPost }> = ({ post }) => (
-  <Card>
-    <CardHeader>
-      <CardTitle>{post.title}</CardTitle>
-      <CardDescription>{post.date} • {post.readTime}</CardDescription>
-    </CardHeader>
-    <CardContent>
-      <p className="text-muted-foreground">{post.excerpt}</p>
-    </CardContent>
-    <CardFooter className="flex justify-between items-center">
-      <div className="flex flex-wrap gap-2">
-        {post.tags.map((tag) => (
-          <Badge key={tag} variant="secondary">{tag}</Badge>
-        ))}
-      </div>
-      <Button variant="ghost" size="sm">
-        Read More <ArrowRight className="ml-2 h-4 w-4" />
-      </Button>
-    </CardFooter>
-  </Card>
-);
-
-const Blog: React.FC = () => {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
-
-  return (
-    <section id="blog" className="py-16">
-      <motion.h2
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="text-3xl font-bold text-center mb-10"
-      >
-        Latest Blog Posts
-      </motion.h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {blogPosts.map((post, index) => (
-          <motion.div
-            key={post.title}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-          >
-            <BlogPost post={post} />
-          </motion.div>
-        ))}
-      </div>
-      <div className="text-center mt-10">
-        <Button size="lg">
-          View All Posts <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-      </div>
-    </section>
-  );
-};
-
-export default Blog;
+export { Button, buttonVariants }

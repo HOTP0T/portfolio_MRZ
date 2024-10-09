@@ -99,7 +99,7 @@ const ContactAndFooter = () => {
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center">
             <Avatar className="h-64 w-64 mb-6">
-              <AvatarImage src="https://github.com/shadcn.png" alt="Profile" />
+              <AvatarImage src="/images/profilepic_perso.jpeg" alt="Profile" />
               <AvatarFallback>MZ</AvatarFallback>
             </Avatar>
             <p className="text-center text-lg font-medium italic mb-8">

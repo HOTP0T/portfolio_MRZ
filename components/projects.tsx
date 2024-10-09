@@ -17,7 +17,8 @@ const projects = [
     technologies: ["html", "css", "js"],
     status: "In Progress",
     preview: "/images/bingosrs_screenshot.png",
-    link: "bingosrs.online/",
+    link: "https://bingosrs.online/",
+    githubLink: "https://github.com/HOTP0T/bingosrs"
   },
   {
     id: "project2",
@@ -27,7 +28,8 @@ const projects = [
     technologies: ["html", "scss", "React"],
     status: "Completed",
     preview: "/images/OCRP7_screenshot.png",
-    link: "hotp0t.github.io/ocr-p7-alogrithmerecherchejs/",
+    link: "https://hotp0t.github.io/ocr-p7-alogrithmerecherchejs/",
+    githubLink: "https://github.com/HOTP0T/ocr-p7-alogrithmerecherchejs"
   },
   {
     id: "project3",
@@ -37,7 +39,8 @@ const projects = [
     technologies: ["Nextjs", "Shadcn", "Tailwind CSS"],
     status: "Completed",
     preview: "/images/Mariekeapp_screenshot.png",
-    link: "marieke-web-app.vercel.app",
+    link: "https://marieke-web-app.vercel.app",
+    githubLink: "https://github.com/HOTP0T/marieke-web-app"
   }
 ];
 
@@ -120,13 +123,22 @@ const Projects = () => {
                 <strong>{t("projects.status")}:</strong>{" "}
                 {t(`projects.${selectedProject.id}.status`)}
               </p>
-              <Button asChild variant="default">
+              <Button asChild variant="default" className="mr-2">
                 <a
                   href={selectedProject.link}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {t("projects.viewProject")}
+                </a>
+              </Button>
+              <Button asChild variant="outline">
+                <a
+                  href={selectedProject.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Github Repo
                 </a>
               </Button>
             </motion.div>

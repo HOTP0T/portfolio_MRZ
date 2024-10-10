@@ -18,7 +18,7 @@ const projects = [
     status: "In Progress",
     preview: "/images/bingosrs_screenshot.png",
     link: "https://bingosrs.online/",
-    githubLink: "https://github.com/HOTP0T/bingosrs"
+    githubLink: "https://github.com/HOTP0T/JTI-BingoPlatform"
   },
   {
     id: "project2",
@@ -40,7 +40,7 @@ const projects = [
     status: "Completed",
     preview: "/images/Mariekeapp_screenshot.png",
     link: "https://marieke-web-app.vercel.app",
-    githubLink: "https://github.com/HOTP0T/marieke-web-app"
+    githubLink: "https://github.com/HOTP0T/MariekeWebApp"
   }
 ];
 

@@ -5,9 +5,10 @@ import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { FaReact, FaNodeJs, FaDocker, FaAws } from 'react-icons/fa';
-import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, SiGit } from 'react-icons/si';
+import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, SiGit, SiJest, } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
+import Image from 'next/image';
 
 const skills = [
   {
@@ -37,7 +38,11 @@ const skills = [
       { id: 'git', name: 'Git' },
       { id: 'vscode', name: 'VS Code' },
       { id: 'docker', name: 'Docker' },
-      { id: 'webpack', name: 'Webpack' },
+      { id: 'npm', name: 'npm' },
+      { id: 'warp', name: 'Warp' },
+      { id: 'figma', name: 'Figma' },
+      { id: 'arc', name: 'Arc' },
+      { id: 'accessibility', name: 'Web Accessibility' },
     ],
   },
 ];
@@ -125,36 +130,38 @@ const TechStack = () => {
             <span>Express</span>
           </div>
           <div className="flex flex-col items-center">
-            <SiMongodb className="text-4xl mb-2" />
-            <span>MongoDB</span>
+            <SiJest className="text-4xl mb-2" />
+            <span>Jest</span>
           </div>
           <div className="flex flex-col items-center">
-            <SiPostgresql className="text-4xl mb-2" />
-            <span>PostgreSQL</span>
+            <Image
+              src="images/posthog-icon-seeklogo.svg"
+              alt="PostHog"
+              width={32}
+              height={32}
+              className="mb-2"
+            />
+            <span>PostHog</span>
           </div>
           <div className="flex flex-col items-center">
-            <SiGraphql className="text-4xl mb-2" />
-            <span>GraphQL</span>
+            <Image
+              src="images/supabase-logo-icon.png"
+              alt="Supabase"
+              width={32}
+              height={32}
+              className="mb-2"
+            />
+            <span>Supabase</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaDocker className="text-4xl mb-2" />
-            <span>Docker</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <FaAws className="text-4xl mb-2" />
-            <span>AWS</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiVercel className="text-4xl mb-2" />
-            <span>Vercel</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <SiGit className="text-4xl mb-2" />
-            <span>Git</span>
-          </div>
-          <div className="flex flex-col items-center">
-            <TbApi className="text-4xl mb-2" />
-            <span>RESTful APIs</span>
+            <Image
+              src="images/tailwind-svgrepo-com.svg"
+              alt="Tailwind CSS"
+              width={32}
+              height={32}
+              className="mb-2"
+            />
+            <span>Tailwind CSS</span>
           </div>
         </div>
       </CardContent>

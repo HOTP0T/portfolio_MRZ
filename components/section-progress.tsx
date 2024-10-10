@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
@@ -39,7 +39,7 @@ const SectionProgress = () => {
   }, []);
 
   return (
-    <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 flex flex-col items-center">
+    <div className="fixed md:right-8 right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col items-center">
       {sections.map((section) => (
         <motion.a
           key={section}

@@ -96,6 +96,9 @@ const ContactAndFooter = () => {
                 </Button>
               </form>
             </Form>
+            <p className="mt-6 text-center italic text-sm text-gray-600">
+              Contact form for demo only, find links below.
+            </p>
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center">
             <Avatar className="h-64 w-64 mb-6">
@@ -128,9 +131,6 @@ const ContactAndFooter = () => {
                 <Link2 className="h-5 w-5" />
                 <span className="sr-only">Website</span>
               </a>
-            {/* <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Twitter className="h-6 w-6" /> 
-            </a>*/}
           </div>
         </div>
         <div className="mt-4 text-center text-sm text-muted-foreground">

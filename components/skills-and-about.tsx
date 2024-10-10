@@ -15,6 +15,9 @@ const skills = [
     id: 'frontend',
     name: 'skills.frontend',
     children: [
+      { id: 'html', name: 'HTML' },
+      { id: 'css', name: 'CSS' },
+      { id: 'javascript', name: 'JavaScript' },
       { id: 'react', name: 'React' },
       { id: 'nextjs', name: 'Next.js' },
       { id: 'tailwind', name: 'Tailwind CSS' },

@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
@@ -32,10 +32,21 @@ const ContactAndFooter = () => {
     },
   });
 
+  // Client-side only logic to load external script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate API call
     setIsSubmitting(false);
     toast({
       title: t('contact.success'),
@@ -49,58 +60,8 @@ const ContactAndFooter = () => {
       <div className="flex-grow flex items-center justify-center">
         <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center md:space-x-8">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
-          <script src="https://static.elfsight.com/platform/platform.js" async></script>
-          <div class="elfsight-app-504d433a-1e36-4a53-889e-d92b57c64f3f" data-elfsight-app-lazy></div>
-            {/* <h2 className="text-3xl font-bold mb-8">{t('contact.title')}</h2>
-            <Form {...form}>
-              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                <FormField
-                  control={form.control}
-                  name="name"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t('contact.name')}</FormLabel>
-                      <FormControl>
-                        <Input placeholder={t('contact.namePlaceholder')} {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="email"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t('contact.email')}</FormLabel>
-                      <FormControl>
-                        <Input type="email" placeholder={t('contact.emailPlaceholder')} {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <FormField
-                  control={form.control}
-                  name="message"
-                  render={({ field }) => (
-                    <FormItem>
-                      <FormLabel>{t('contact.message')}</FormLabel>
-                      <FormControl>
-                        <Textarea placeholder={t('contact.messagePlaceholder')} {...field} />
-                      </FormControl>
-                      <FormMessage />
-                    </FormItem>
-                  )}
-                />
-                <Button type="submit" className="w-full" disabled={isSubmitting}>
-                  {isSubmitting ? t('contact.sending') : t('contact.send')}
-                </Button>
-              </form>
-            </Form>
-            <p className="mt-6 text-center italic text-sm text-gray-600">
-              Contact form for demo only, find links below.
-            </p> */}
+            {/* External content */}
+            <div className="elfsight-app-504d433a-1e36-4a53-889e-d92b57c64f3f" data-elfsight-app-lazy></div>
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center">
             <Avatar className="h-64 w-64 mb-6">
@@ -130,16 +91,18 @@ const ContactAndFooter = () => {
               <Mail className="h-6 w-6" />
             </a>
             <a href="https://hotp0t.link" target="_blank" rel="noopener">
-                <Link2 className="h-5 w-5" />
-                <span className="sr-only">Website</span>
-              </a>
+              <Link2 className="h-5 w-5" />
+              <span className="sr-only">Website</span>
+            </a>
           </div>
         </div>
         <div className="mt-4 text-center text-sm text-muted-foreground">
           <p>{t('footer.rights')}</p>
-          <p>{t('footer.builtWith')}</p></div>
+          <p>{t('footer.builtWith')}</p>
+        </div>
+        <div className="elfsight-app-5586d26e-c84e-47d6-8231-f2a8f0a4f914" data-elfsight-app-lazy></div>
       </footer>
-      </div>
+    </div>
   );
 };
 

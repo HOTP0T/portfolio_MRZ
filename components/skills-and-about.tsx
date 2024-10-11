@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { FaReact, FaNodeJs, FaDocker, FaAws } from 'react-icons/fa';
-import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, SiGit, SiJest, } from 'react-icons/si';
+import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, SiGit, SiJest } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
@@ -54,6 +54,18 @@ const Skills = () => {
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
   const { t } = useTranslation();
 
+  // Client-side only logic to load external script
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://static.elfsight.com/platform/platform.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="w-full">
       <h2 className="text-3xl font-bold mb-6">{t('skills.title')}</h2>
@@ -84,6 +96,17 @@ const Skills = () => {
             </CardContent>
           </Card>
         ))}
+
+        {/* Elfsight Widget as a Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle>{t('')}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {/* Widget from Elfsight */}
+            <div className="elfsight-app-3365aae1-c600-4f1a-acbe-1f12c266da35" data-elfsight-app-lazy></div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

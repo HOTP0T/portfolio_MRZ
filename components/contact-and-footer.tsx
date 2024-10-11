@@ -49,7 +49,9 @@ const ContactAndFooter = () => {
       <div className="flex-grow flex items-center justify-center">
         <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center md:space-x-8">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-3xl font-bold mb-8">{t('contact.title')}</h2>
+          <script src="https://static.elfsight.com/platform/platform.js" async></script>
+          <div class="elfsight-app-504d433a-1e36-4a53-889e-d92b57c64f3f" data-elfsight-app-lazy></div>
+            {/* <h2 className="text-3xl font-bold mb-8">{t('contact.title')}</h2>
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                 <FormField
@@ -98,11 +100,11 @@ const ContactAndFooter = () => {
             </Form>
             <p className="mt-6 text-center italic text-sm text-gray-600">
               Contact form for demo only, find links below.
-            </p>
+            </p> */}
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center">
             <Avatar className="h-64 w-64 mb-6">
-              <AvatarImage src="/images/profilepic_perso.jpeg" alt="Profile" />
+              <AvatarImage src="/images/fc_profilepic_AZ.jpeg" alt="Profile" />
               <AvatarFallback>MZ</AvatarFallback>
             </Avatar>
             <p className="text-center text-lg font-medium italic mb-8">
@@ -135,10 +137,9 @@ const ContactAndFooter = () => {
         </div>
         <div className="mt-4 text-center text-sm text-muted-foreground">
           <p>{t('footer.rights')}</p>
-          <p>{t('footer.builtWith')}</p>
-        </div>
+          <p>{t('footer.builtWith')}</p></div>
       </footer>
-    </div>
+      </div>
   );
 };
 

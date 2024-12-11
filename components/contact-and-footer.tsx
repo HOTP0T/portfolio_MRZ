@@ -87,7 +87,7 @@ const ContactAndFooter = () => {
             <a href="https://www.linkedin.com/in/maximilien-rouillon/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Linkedin className="h-6 w-6" />
             </a>
-            <a href="mailto:tpcmaky@gmail.com" aria-label="Email">
+            <a href="mailto:maxrouillonzhu@gmail.com" aria-label="Email">
               <Mail className="h-6 w-6" />
             </a>
             <a href="https://hotp0t.link" target="_blank" rel="noopener">

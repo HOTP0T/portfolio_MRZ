@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FaReact, FaNodeJs, FaDocker, FaAws, FaHeartCircleBolt, FaHeart } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDocker, FaAws, FaHeart } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, SiGit, SiJest } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';

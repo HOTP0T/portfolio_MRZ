@@ -15,7 +15,7 @@ const projects = [
     description:
       "A Bingo Card tool for OSRS events, designed to track progress, color-code tiles, mark completions, add notes, and stay organized and motivated throughout the event.",
     technologies: ["html", "css", "js"],
-    status: "In Progress",
+    status: "Remake In Progress",
     preview: "/images/bingosrs_screenshot.png",
     link: "https://bingosrs.online/",
     githubLink: "https://github.com/HOTP0T/JTI-BingoPlatform"
@@ -28,7 +28,7 @@ const projects = [
     technologies: ["html", "scss", "React"],
     status: "Completed",
     preview: "/images/OCRP7_screenshot.png",
-    link: "https://hotp0t.github.io/ocr-p7-alogrithmerecherchejs/",
+    link: "https://hotp0t.github.io/OCR-P7-AlogrithmeRechercheJs/",
     githubLink: "https://github.com/HOTP0T/ocr-p7-alogrithmerecherchejs"
   },
   {
@@ -41,6 +41,39 @@ const projects = [
     preview: "/images/Mariekeapp_screenshot.png",
     link: "https://marieke-web-app.vercel.app",
     githubLink: "https://github.com/HOTP0T/MariekeWebApp"
+  },
+  {
+    id: "project4",
+    name: "FAQ AI ChatBot",
+    description:
+      "Preview of a AI Chatbot, possiblity to feed the bot information of your company/group/services for customers to communicate with a ~digital FAQ/support agent~ ",
+    technologies: ["AI", "Coze"],
+    status: "In review",
+    preview: "/images/essca_bot.png",
+    link: "hotp0t.github.io/ESSCA-chatbot/",
+    githubLink: "https://github.com/HOTP0T/ESSCA-chatbot"
+  },
+  {
+    id: "project5",
+    name: "Simple pop-up Form",
+    description:
+      "Showcase of a form component for a react app",
+    technologies: ["html", "css", "js"],
+    status: "Completed",
+    preview: "/images/gameon_form.png",
+    link: "https://hotp0t.github.io/OCR_P4-GameOn_website-FR/",
+    githubLink: "https://github.com/HOTP0T/OCR_P4-GameOn_website-FR"
+  },
+  {
+    id: "project6",
+    name: "Sports App Dashboard including charts and stats",
+    description:
+      "Showcase a sports dashboard using react and recharts library | jsdoc included",
+    technologies: ["React", "Recharts", "jsdoc", "jest"],
+    status: "Completed",
+    preview: "/images/SportSee.png",
+    link: "https://hotp0t.github.io/OCR_P4-GameOn_website-FR/",
+    githubLink: "https://github.com/HOTP0T/OCR_P4-GameOn_website-FR"
   }
 ];
 

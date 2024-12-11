@@ -7,7 +7,7 @@
   },
   "hero": {
     "title": "Maximilien Rouillon Zhu",
-    "subtitle": "Développeur Full-Stack",
+    "subtitle": "Développeur Full-Stack | Consultation Informatique",
     "description": "Création de solutions web innovantes avec des technologies modernes.",
     "scrollToProjects": "Défiler vers les projets"
   },
@@ -19,7 +19,7 @@
   "project1": {
     "name": "Bingosrs - OSRS Bingo Card",
     "description": "A Bingo Card tool for OSRS events, designed to track progress, color-code tiles, mark completions, add notes, and stay organized and motivated throughout the event.",
-    "status": "En cours"
+    "status": "Refonte En cours"
   },
   "project2": {
     "name": "Algorithm de Recherche",
@@ -29,6 +29,21 @@
   "project3": {
     "name": "Marieke's online Workshop",
     "description": "Marieke's online workshop is a web application that allows users to book workshops, view the workshop schedule, and get in touch with Marieke.",
+    "status": "Terminé"
+  },
+  "project4": {
+    "name": "FAQ AI ChatBot",
+    "description": "Preview of a AI Chatbot, possiblity to feed the bot information of your company/group/services for customers to communicate with a virtual FAQ/support agent",
+    "status": "En revue"
+  },
+  "project5": {
+    "name": "Simple pop-up Form",
+    "description": "Showcase of a form component for a react app",
+    "status": "Terminé"
+  },
+  "project6": {
+    "name": "Sports App Dashboard including charts and stats",
+    "description": "Showcase a sports dashboard using react and recharts library | jsdoc included",
     "status": "Terminé"
   }
 },

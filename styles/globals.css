@@ -76,3 +76,12 @@ html, body {
     scroll-snap-type: y proximity;
   }
 }
+
+.passionmsg {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 0.85em;
+}

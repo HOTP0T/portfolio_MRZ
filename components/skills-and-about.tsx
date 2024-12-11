@@ -4,11 +4,12 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { FaReact, FaNodeJs, FaDocker, FaAws } from 'react-icons/fa';
+import { FaReact, FaNodeJs, FaDocker, FaAws, FaHeartCircleBolt, FaHeart } from 'react-icons/fa';
 import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, SiGit, SiJest } from 'react-icons/si';
 import { TbApi } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
+import { url } from 'inspector';
 
 const skills = [
   {
@@ -29,16 +30,15 @@ const skills = [
     name: 'skills.backend',
     children: [
       { id: 'nodejs', name: 'Node.js' },
-      { id: 'express', name: 'Express' },
       { id: 'supabase', name: 'Supabase' },
-      { id: 'graphql', name: 'GraphQL' },
+      { id: 'PostgreSQL', name: 'PostgreSQL' },
     ],
   },
   {
     id: 'tools',
     name: 'skills.tools',
     children: [
-      { id: 'git', name: 'Git' },
+      { id: 'github', name: 'Github' },
       { id: 'vscode', name: 'VS Code' },
       { id: 'docker', name: 'Docker' },
       { id: 'npm', name: 'npm' },
@@ -46,6 +46,8 @@ const skills = [
       { id: 'figma', name: 'Figma' },
       { id: 'arc', name: 'Arc' },
       { id: 'accessibility', name: 'Web Accessibility' },
+      { id: 'Discord', name: 'Discord' },
+      { id: 'Setapp', name: 'Setapp' },
     ],
   },
 ];
@@ -104,7 +106,7 @@ const Skills = () => {
           </CardHeader>
           <CardContent>
             {/* Widget from Elfsight */}
-            <div className="elfsight-app-3365aae1-c600-4f1a-acbe-1f12c266da35" data-elfsight-app-lazy></div>
+            <div className="elfsight-app-3365aae1-c600-4f1a-acbe-1f12c266da35" data-elfsight-app-lazy />
           </CardContent>
         </Card>
       </div>
@@ -151,10 +153,10 @@ const TechStack = () => {
             <FaNodeJs className="text-4xl mb-2" />
             <span>Node.js</span>
           </div>
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <SiExpress className="text-4xl mb-2" />
             <span>Express</span>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center">
             <SiJest className="text-4xl mb-2" />
             <span>Jest</span>
@@ -188,6 +190,10 @@ const TechStack = () => {
               className="mb-2"
             />
             <span>Tailwind CSS</span>
+          </div>
+          <div className="flex flex-col items-center">
+          <FaHeart className="text-4xl mb-2" />
+          <span className="passionmsg" >Most important tech used: <br/> Passion for building awesome stuff!!</span>
           </div>
         </div>
       </CardContent>

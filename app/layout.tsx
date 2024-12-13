@@ -48,6 +48,9 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const sbSiteSecret = process.env.NEXT_PUBLIC_SB_SITE_SECRET
+  const sbScriptUrl = process.env.NEXT_PUBLIC_SITEBEHAVIOUR_SCRIPT_URL
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${inter.variable} font-sans bg-gradient-to-br from-blue-50 via-indigo-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black min-h-screen`}>
@@ -61,19 +64,21 @@ export default function RootLayout({
 
         {/* SiteBehaviour Script */}
         <Head>
-          <script type="text/javascript">
-            {`
-              (function() {
-                var sbSiteSecret = process.env.NEXT_PUBLIC_SB_SITE_SECRET;
-                window.sitebehaviourTrackingSecret = sbSiteSecret;
-                var scriptElement = document.createElement('script');
-                scriptElement.async = true;
-                scriptElement.id = 'site-behaviour-script-v2';
-                scriptElement.src = process.env.NEXT_PUBLIC_SITEBEHAVIOUR_SCRIPT_URL + '?sitebehaviour-secret=' + sbSiteSecret;
-                document.head.appendChild(scriptElement); 
-              })()
-            `}
-          </script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function() {
+                  var sbSiteSecret = '${sbSiteSecret}';
+                  window.sitebehaviourTrackingSecret = sbSiteSecret;
+                  var scriptElement = document.createElement('script');
+                  scriptElement.async = true;
+                  scriptElement.id = 'site-behaviour-script-v2';
+                  scriptElement.src = '${sbScriptUrl}?sitebehaviour-secret=' + sbSiteSecret;
+                  document.head.appendChild(scriptElement); 
+                })()
+              `,
+            }}
+          ></script>
         </Head>
       </body>
     </html>

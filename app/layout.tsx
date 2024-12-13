@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Metadata } from 'next'
 import { I18nProvider } from '@/components/i18n-provider'
 import SectionProgress from '@/components/section-progress'
+import Head from 'next/head'
 
 const outfit = Outfit({ 
   subsets: ['latin'],
@@ -57,6 +58,23 @@ export default function RootLayout({
             <Toaster />
           </I18nProvider>
         </ThemeProvider>
+
+        {/* SiteBehaviour Script */}
+        <Head>
+          <script type="text/javascript">
+            {`
+              (function() {
+                var sbSiteSecret = process.env.NEXT_PUBLIC_SB_SITE_SECRET;
+                window.sitebehaviourTrackingSecret = sbSiteSecret;
+                var scriptElement = document.createElement('script');
+                scriptElement.async = true;
+                scriptElement.id = 'site-behaviour-script-v2';
+                scriptElement.src = process.env.NEXT_PUBLIC_SITEBEHAVIOUR_SCRIPT_URL + '?sitebehaviour-secret=' + sbSiteSecret;
+                document.head.appendChild(scriptElement); 
+              })()
+            `}
+          </script>
+        </Head>
       </body>
     </html>
   )

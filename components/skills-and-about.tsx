@@ -20,9 +20,9 @@ const skills = [
       { id: 'css', name: 'CSS' },
       { id: 'javascript', name: 'JavaScript' },
       { id: 'react', name: 'React' },
-      { id: 'nextjs', name: 'Next.js' },
-      { id: 'tailwind', name: 'Tailwind CSS' },
-      { id: 'typescript', name: 'TypeScript' },
+      // { id: 'nextjs', name: 'Next.js' },
+      // { id: 'tailwind', name: 'Tailwind CSS' },
+      // { id: 'typescript', name: 'TypeScript' },
     ],
   },
   {
@@ -30,7 +30,7 @@ const skills = [
     name: 'skills.backend',
     children: [
       { id: 'nodejs', name: 'Node.js' },
-      { id: 'supabase', name: 'Supabase' },
+      // { id: 'supabase', name: 'Supabase' },
       { id: 'PostgreSQL', name: 'PostgreSQL' },
     ],
   },
@@ -46,8 +46,10 @@ const skills = [
       { id: 'figma', name: 'Figma' },
       { id: 'arc', name: 'Arc' },
       { id: 'accessibility', name: 'Web Accessibility' },
-      { id: 'Discord', name: 'Discord' },
-      { id: 'Setapp', name: 'Setapp' },
+      { id: 'discord', name: 'Discord' },
+      { id: 'tablePlus', name: 'TablePlus' },
+      { id: 'ai', name: 'AI' },
+
     ],
   },
 ];
@@ -100,15 +102,15 @@ const Skills = () => {
         ))}
 
         {/* Elfsight Widget as a Card */}
-        <Card>
+        {/* <Card>
           <CardHeader>
             <CardTitle>{t('')}</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent> */}
             {/* Widget from Elfsight */}
-            <div className="elfsight-app-3365aae1-c600-4f1a-acbe-1f12c266da35" data-elfsight-app-lazy />
+            {/* <div className="elfsight-app-3365aae1-c600-4f1a-acbe-1f12c266da35" data-elfsight-app-lazy />
           </CardContent>
-        </Card>
+        </Card>  */}
       </div>
     </div>
   );
@@ -145,45 +147,43 @@ const TechStack = () => {
             <FaReact className="text-4xl mb-2" />
             <span>React</span>
           </div>
-          <div className="flex flex-col items-center">
+          {/* <div className="flex flex-col items-center">
             <SiNextdotjs className="text-4xl mb-2" />
             <span>Next.js</span>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center">
             <FaNodeJs className="text-4xl mb-2" />
             <span>Node.js</span>
-          </div>
-          {/* <div className="flex flex-col items-center">
+          </div> 
+          <div className="flex flex-col items-center">
             <SiExpress className="text-4xl mb-2" />
             <span>Express</span>
-          </div> */}
+          </div>
           <div className="flex flex-col items-center">
             <SiJest className="text-4xl mb-2" />
             <span>Jest</span>
           </div>
           <div className="flex flex-col items-center">
             <Image
-              src="images/posthog-icon-seeklogo.svg"
+              src="/images/posthog-icon-seeklogo.svg"
               alt="PostHog"
               width={32}
               height={32}
-              style={{ width: "auto", height: "auto", objectFit: "cover" }}
               className="mb-2"
             />
             <span>PostHog</span>
-          </div>
-          <div className="flex flex-col items-center">
+        </div>
+        <div className="flex flex-col items-center">
             <Image
-              src="images/supabase-logo-icon.png"
+              src="/images/supabase-logo-icon.png"
               alt="Supabase"
               width={32}
               height={32}
-              style={{ width: "auto", height: "auto", objectFit: "cover" }}
               className="mb-2"
             />
-            <span>Supabase</span>
-          </div>
-          <div className="flex flex-col items-center">
+          <span>Supabase</span>
+        </div>
+        <div className="flex flex-col items-center">
             <Image
               src="images/tailwind-svgrepo-com.svg"
               alt="Tailwind CSS"
@@ -192,10 +192,10 @@ const TechStack = () => {
               className="mb-2"
             />
             <span>Tailwind CSS</span>
-          </div>
+          </div> 
           <div className="flex flex-col items-center">
           <FaHeart className="text-4xl mb-2" />
-          <span className="passionmsg" >Most important tech used: <br/> Passion for building awesome stuff!!</span>
+          <span className="passionmsg" >Passion for building awesome stuff!!</span>
           </div>
         </div>
       </CardContent>
@@ -211,7 +211,17 @@ const SkillsAndAbout = () => {
           <Skills />
           <div className="space-y-8">
             <About />
-            <TechStack />
+            {/* <TechStack /> */}
+            {/* Elfsight Widget as a Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle>{('')}</CardTitle>
+          </CardHeader>
+          <CardContent>
+            {/* Widget from Elfsight */}
+            <div className="elfsight-app-3365aae1-c600-4f1a-acbe-1f12c266da35" data-elfsight-app-lazy />
+          </CardContent>
+        </Card>
           </div>
         </div>
       </div>

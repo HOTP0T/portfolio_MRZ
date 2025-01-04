@@ -1,6 +1,8 @@
+import Image from 'next/image';
+
 <Image
   src="/images/bingosrs_screenshot.png"
-  fill
-  className="object-cover"
   alt="Bingo Screenshot"
-/>;
+  layout="fill"
+  className="object-cover"
+/>

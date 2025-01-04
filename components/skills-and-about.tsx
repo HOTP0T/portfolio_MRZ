@@ -167,6 +167,7 @@ const TechStack = () => {
               alt="PostHog"
               width={32}
               height={32}
+              style={{ width: "auto", height: "auto", objectFit: "cover" }}
               className="mb-2"
             />
             <span>PostHog</span>
@@ -177,6 +178,7 @@ const TechStack = () => {
               alt="Supabase"
               width={32}
               height={32}
+              style={{ width: "auto", height: "auto", objectFit: "cover" }}
               className="mb-2"
             />
             <span>Supabase</span>

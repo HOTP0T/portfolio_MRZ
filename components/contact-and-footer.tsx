@@ -61,7 +61,7 @@ const ContactAndFooter = () => {
         <div className="w-full max-w-4xl flex flex-col md:flex-row justify-between items-center md:space-x-8">
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
             {/* External content */}
-            <div className="elfsight-app-504d433a-1e36-4a53-889e-d92b57c64f3f" data-elfsight-app-lazy></div>
+            <div className="elfsight-app-504d433a-1e36-4a53-889e-d92b57c64f3f" data-elfsight-app-lazy />
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center">
             <Avatar className="h-64 w-64 mb-6">
@@ -90,7 +90,7 @@ const ContactAndFooter = () => {
             <a href="mailto:maxrouillonzhu@gmail.com" aria-label="Email">
               <Mail className="h-6 w-6" />
             </a>
-            <a href="https://hotp0t.link" target="_blank" rel="noopener">
+            <a href="https://hotp0t.link" target="_blank" rel="noopener noreferrer">
               <Link2 className="h-5 w-5" />
               <span className="sr-only">Website</span>
             </a>
@@ -100,7 +100,7 @@ const ContactAndFooter = () => {
           <p>{t('footer.rights')}</p>
           <p>{t('footer.builtWith')}</p>
         </div>
-        <div className="elfsight-app-5586d26e-c84e-47d6-8231-f2a8f0a4f914" data-elfsight-app-lazy></div>
+        <div className="elfsight-app-5586d26e-c84e-47d6-8231-f2a8f0a4f914" data-elfsight-app-lazy />
       </footer>
     </div>
   );

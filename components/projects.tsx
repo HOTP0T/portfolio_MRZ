@@ -133,14 +133,13 @@ const Projects = () => {
               className="w-full md:w-3/4 p-6"
             >
               <div className="aspect-video bg-muted rounded-lg mb-4 overflow-hidden">
-                <Image
-                  src={selectedProject.preview}
-                  alt={t(`projects.${selectedProject.id}.name`)}
-                  width={800}
-                  height={600}
-                  layout="responsive"
-                  objectFit="cover"
-                />
+              <Image
+                src={selectedProject.preview}
+                alt={t(`projects.${selectedProject.id}.name`)}
+                width={800}
+                height={600}
+                style={{ objectFit: "cover" }}
+              />
               </div>
               <h3 className="text-2xl font-bold mb-2 font-heading">
                 {t(`projects.${selectedProject.id}.name`)}

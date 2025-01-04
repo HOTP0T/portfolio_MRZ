@@ -1,52 +1,63 @@
-import '../styles/globals.css'
-import { Outfit, Inter } from 'next/font/google'
-import { ThemeProvider } from '@/components/theme-provider'
-import { Toaster } from "@/components/ui/toaster"
-import { Metadata } from 'next'
-import { I18nProvider } from '@/components/i18n-provider'
-import SectionProgress from '@/components/section-progress'
-import Script from 'next/script'
+import "../styles/globals.css";
+import { Outfit, Inter } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "@/components/ui/toaster";
+import type { Metadata } from "next";
+import { I18nProvider } from "@/components/i18n-provider";
+import SectionProgress from "@/components/section-progress";
+import Script from "next/script";
 
-const outfit = Outfit({ 
-  subsets: ['latin'],
-  variable: '--font-outfit',
-})
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+});
 
 const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-})
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
 
 export const metadata: Metadata = {
-  title: 'Maximilien Rouillon Zhu - Full-Stack Developer',
-  description: 'Portfolio of Maximilien Rouillon Zhu, a passionate full-stack developer creating innovative web solutions.',
-  keywords: ['Full-Stack Developer', 'Web Development', 'React', 'Node.js', 'Portfolio'],
-  authors: [{ name: 'Maximilien Rouillon Zhu' }],
+  title: "Maximilien Rouillon Zhu - Full-Stack Developer",
+  description:
+    "Portfolio of Maximilien Rouillon Zhu, a passionate full-stack developer creating innovative web solutions.",
+  keywords: [
+    "Full-Stack Developer",
+    "Web Development",
+    "React",
+    "Node.js",
+    "Portfolio",
+  ],
+  authors: [{ name: "Maximilien Rouillon Zhu" }],
   openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: 'https://github.com/hotp0t',
-    siteName: 'Maximilien Rouillon Zhu Portfolio',
+    type: "website",
+    locale: "en_US",
+    url: "https://github.com/hotp0t",
+    siteName: "Maximilien Rouillon Zhu Portfolio",
     images: [
       {
-        url: 'https://github.com/hotp0t/og-image.jpg',
+        url: "https://github.com/hotp0t/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Maximilien Rouillon Zhu - Full-Stack Developer',
+        alt: "Maximilien Rouillon Zhu - Full-Stack Developer",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@HOTP0T',
-    creator: '@HOTP0T',
+    card: "summary_large_image",
+    site: "@HOTP0T",
+    creator: "@HOTP0T",
   },
-}
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
@@ -57,7 +68,9 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
       </head>
-      <body className={`${outfit.variable} ${inter.variable} font-sans bg-gradient-to-br from-blue-50 via-indigo-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black min-h-screen`}>
+      <body
+        className={`${outfit.variable} ${inter.variable} font-sans bg-gradient-to-br from-blue-50 via-indigo-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black min-h-screen`}
+      >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <I18nProvider>
             <SectionProgress />
@@ -67,5 +80,5 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-  )
+  );
 }

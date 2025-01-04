@@ -5,6 +5,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Metadata } from 'next'
 import { I18nProvider } from '@/components/i18n-provider'
 import SectionProgress from '@/components/section-progress'
+import Script from 'next/script'
 
 const outfit = Outfit({ 
   subsets: ['latin'],
@@ -49,6 +50,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="300875c8-bfa4-4c43-9bc2-da55ba1b0579"
+          strategy="afterInteractive"
+        />
+      </head>
       <body className={`${outfit.variable} ${inter.variable} font-sans bg-gradient-to-br from-blue-50 via-indigo-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black min-h-screen`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <I18nProvider>

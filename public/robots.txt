@@ -1,4 +1,6 @@
+# Allow all crawlers
 User-agent: *
-Allow: /
+Disallow: /
 
-Sitemap: https://www.yourportfolio.com/sitemap.xml
+# Update with your actual domain
+Sitemap: https://maximilien-rz.vercel.app/sitemap.xml

@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     siteName: "Maximilien Rouillon Zhu Portfolio",
     images: [
       {
-        url: "https://github.com/hotp0t/og-image.jpg",
+        url: "https://github.com/HOTP0T/portfolio_MRZ/blob/9b0460226be95e946539c5f4a848c0de4af70bc2/public/images/fc_profilepic_AZ%20-%20PNG.png?raw=true",
         width: 1200,
         height: 630,
         alt: "Maximilien Rouillon Zhu - Full-Stack Developer",

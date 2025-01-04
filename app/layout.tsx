@@ -34,6 +34,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://github.com/hotp0t",
     siteName: "Maximilien Rouillon Zhu Portfolio",
+    title: "Maximilien Rouillon Zhu - Full-Stack Developer",
+    description:
+      "Portfolio of Maximilien Rouillon Zhu, a passionate full-stack developer creating innovative web solutions.",
     images: [
       {
         url: "https://github.com/HOTP0T/portfolio_MRZ/blob/9b0460226be95e946539c5f4a848c0de4af70bc2/public/images/fc_profilepic_AZ%20-%20PNG.png?raw=true",
@@ -47,6 +50,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@HOTP0T",
     creator: "@HOTP0T",
+    title: "Maximilien Rouillon Zhu - Full-Stack Developer",
+    description:
+      "Portfolio of Maximilien Rouillon Zhu, a passionate full-stack developer creating innovative web solutions.",
   },
   robots: {
     index: false,

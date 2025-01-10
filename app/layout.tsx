@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { I18nProvider } from "@/components/i18n-provider";
 import SectionProgress from "@/components/section-progress";
 import Script from "next/script";
-import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const outfit = Outfit({
   subsets: ["latin"],

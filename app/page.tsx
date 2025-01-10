@@ -9,7 +9,6 @@ import SkillsAndAbout from '@/components/skills-and-about';
 import ContactAndFooter from '@/components/contact-and-footer';
 import ScrollProgress from '@/components/ui/scroll-progress';
 import SectionProgress from '@/components/section-progress';
-import BackToTop from '@/components/ui/back-to-top';
 import '@/lib/i18n';
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -44,7 +43,6 @@ export default function Home() {
       </main>
       <SpeedInsights />
       <Analytics />
-      <BackToTop />
     </div>
   );
 }

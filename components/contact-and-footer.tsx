@@ -65,7 +65,11 @@ const ContactAndFooter = () => {
           </div>
           <div className="w-full md:w-1/2 flex flex-col items-center">
             <Avatar className="h-64 w-64 mb-6">
-              <AvatarImage src="/images/fc_profilepic_AZ.jpeg" alt="Profile" />
+              <AvatarImage 
+              src="/images/fc_profilepic_AZ.jpeg" 
+              alt="Profile picture" 
+              className="aspect-square object-cover"
+              />
               <AvatarFallback>MZ</AvatarFallback>
             </Avatar>
             <p className="text-center text-lg font-medium italic mb-8">
@@ -100,7 +104,7 @@ const ContactAndFooter = () => {
           <p>{t('footer.rights')}</p>
           <p>{t('footer.builtWith')}</p>
         </div>
-        <div className="elfsight-app-5586d26e-c84e-47d6-8231-f2a8f0a4f914" data-elfsight-app-lazy />
+        <div  className="elfsight-app-5586d26e-c84e-47d6-8231-f2a8f0a4f914" data-elfsight-app-lazy />
       </footer>
     </div>
   );

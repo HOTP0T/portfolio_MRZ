@@ -1,6 +1,3 @@
-# Allow all crawlers
 User-agent: *
-Disallow: /
-
-# Update with your actual domain
-Sitemap: https://maximilien-rz.vercel.app/sitemap.xml
+Disallow: /admin/
+Allow: /public/

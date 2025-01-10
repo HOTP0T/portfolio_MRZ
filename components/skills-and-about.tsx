@@ -9,7 +9,7 @@ import { SiNextdotjs, SiExpress, SiMongodb, SiPostgresql, SiGraphql, SiVercel, S
 import { TbApi } from 'react-icons/tb';
 import { useTranslation } from 'react-i18next';
 import Image from 'next/image';
-import { url } from 'inspector';
+// import { url } from 'inspector';
 
 const skills = [
   {

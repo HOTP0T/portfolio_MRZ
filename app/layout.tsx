@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { I18nProvider } from "@/components/i18n-provider";
 import SectionProgress from "@/components/section-progress";
 import Script from "next/script";
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google'
 
 const outfit = Outfit({
   subsets: ["latin"],
@@ -55,8 +56,8 @@ export const metadata: Metadata = {
       "Portfolio of Maximilien Rouillon Zhu, a passionate full-stack developer creating innovative web solutions.",
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   icons: {
     icon: [
@@ -87,11 +88,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* <!-- Umami tag --> */}
         <Script
           src="https://cloud.umami.is/script.js"
           data-website-id="300875c8-bfa4-4c43-9bc2-da55ba1b0579"
           strategy="afterInteractive"
         />
+        <GoogleTagManager gtmId="GTM-T9RGPZCK" /> 
       </head>
       <body
         className={`${outfit.variable} ${inter.variable} font-sans bg-gradient-to-br from-blue-50 via-indigo-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-black min-h-screen`}

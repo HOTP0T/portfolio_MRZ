@@ -88,6 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+      <meta name="image" property="og:image" content="https://raw.githubusercontent.com/HOTP0T/portfolio_MRZ/refs/heads/main/public/images/OG-2025.png" />
         {/* <!-- Umami tag --> */}
         <Script
           src="https://cloud.umami.is/script.js"

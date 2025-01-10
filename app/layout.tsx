@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://raw.githubusercontent.com/HOTP0T/portfolio_MRZ/refs/heads/main/public/images/OG-2025.png",
-        width: 1100,
+        width: 1200,
         height: 630,
         alt: "Maximilien Rouillon Zhu - Full-Stack Developer",
       },

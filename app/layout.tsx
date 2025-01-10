@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://github.com/hotp0t",
+    url: "https://portfolio-mrz.vercel.app/",
     siteName: "Maximilien Rouillon Zhu Portfolio",
     title: "Maximilien Rouillon Zhu - Full-Stack Developer",
     description:
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     images: [
       {
         url: "https://raw.githubusercontent.com/HOTP0T/portfolio_MRZ/refs/heads/main/public/images/OG-2025.png",
-        width: 1200,
+        width: 1100,
         height: 630,
         alt: "Maximilien Rouillon Zhu - Full-Stack Developer",
       },

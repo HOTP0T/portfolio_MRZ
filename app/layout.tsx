@@ -40,7 +40,7 @@ export const metadata: Metadata = {
       "Portfolio of Maximilien Rouillon Zhu, a passionate full-stack developer creating innovative web solutions.",
     images: [
       {
-        url: "https://github.com/HOTP0T/portfolio_MRZ/blob/9b0460226be95e946539c5f4a848c0de4af70bc2/public/images/fc_profilepic_AZ%20-%20PNG.png?raw=true",
+        url: "https://raw.githubusercontent.com/HOTP0T/portfolio_MRZ/066554320f15805ec12f19d36869d8ea12761b0c/public/images/OG-2025.png",
         width: 1200,
         height: 630,
         alt: "Maximilien Rouillon Zhu - Full-Stack Developer",
